@@ -19,4 +19,6 @@ For the analysis two different methods were considered to join the tables.
 A simple first approximation was to use matching citynames, to get bases and sightings that happened very close to one another.
 However, the more useful (and computationally interesting) method was to calculate the distance to the nearest miltary base (and nearest airforce base) for each of the remaining 63k+ sightings. 
 
-This calculated, the tables could be loaded into postgres and the closest base names could be used as the joining element, many-to-one, from bases to sightings, to determine if there were any commonalities or other oddities. In order to fully determine if there is anything statistically significant about the recorded sightings however, a density map of population within the united states would be required. It isn't enough to simply say that the average sighting occurs within 
+Load:
+This calculated, the tables can be loaded into postgres and the closest base names used as a joining element, many-to-one, from bases to sightings, to determine if there were any commonalities or other oddities. In order to fully determine if there is anything statistically significant about the recorded sightings however, a density map of population within the united states would be required. It isn't enough to simply say that the average sighting occurs within 30 miles of any military base and 50 of an airforce base, without knowing whether the average person normally lives within 30 miles of any military base and 100 of an airforce base, for random example.
+
